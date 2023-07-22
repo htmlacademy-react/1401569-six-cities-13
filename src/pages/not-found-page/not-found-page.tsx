@@ -1,4 +1,6 @@
-function ErrorPage(): JSX.Element {
+import {Link} from 'react-router-dom';
+
+function NotFoundPage(): JSX.Element {
   return (
     <div className="page page--gray page--main">
       <header className="header">
@@ -46,9 +48,9 @@ function ErrorPage(): JSX.Element {
           <div className="cities__places-container cities__places-container--empty container">
             <section className="cities__no-places">
               <div className="cities__status-wrapper tabs__content">
-                <b className="cities__status">404 page not found</b>
+                <b className="cities__status">Page not found</b>
                 <p className="cities__status-description">
-                  Go to <a href="#">main page</a>
+                  Go to <Link to="/">main page</Link>
                 </p>
               </div>
             </section>
@@ -60,4 +62,4 @@ function ErrorPage(): JSX.Element {
   );
 }
 
-export default ErrorPage;
+export default NotFoundPage;

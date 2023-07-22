@@ -4,7 +4,7 @@ import MainPage from '../../pages/main-page/main-page';
 import LoginPage from '../../pages/login-page/login-page';
 import FavoritesPage from '../../pages/favorites/favorites';
 import OfferPage from '../../pages/offers-page/offers-page';
-import NotFoundPage from '../../pages/error-page/error-page';
+import NotFoundPage from '../../pages/not-found-page/not-found-page';
 
 type AppProps = {
   countCitiesCard: number;

@@ -1,5 +1,6 @@
 import {Route, BrowserRouter, Routes} from 'react-router-dom';
-import {AppRoute} from '../../const';
+import {AppRoute, AuthorizationStatus} from '../../const';
+import PrivateRoute from '../private-route/private-route';
 import MainPage from '../../pages/main-page/main-page';
 import LoginPage from '../../pages/login-page/login-page';
 import FavoritesPage from '../../pages/favorites/favorites';
@@ -24,7 +25,13 @@ function App({ countCitiesCard }: AppProps): JSX.Element {
         />
         <Route
           path = {AppRoute.Favorites}
-          element = {<FavoritesPage />}
+          element = {
+            <PrivateRoute
+              authorizationStatus = {AuthorizationStatus.NoAuth}
+            >
+              <FavoritesPage />
+            </PrivateRoute>
+          }
         />
         <Route
           path = {AppRoute.Offer}
